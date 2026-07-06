@@ -1,0 +1,302 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    background:linear-gradient(
+        135deg,
+        #87CEEB,
+        #B0E0E6,
+        #E0F7FF
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.chat-container{
+    width:90%;
+    max-width:900px;
+    height:90vh;
+
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+    overflow:hidden;
+
+    box-shadow:0 8px 30px rgba(0,0,0,0.15);
+
+    display:flex;
+    flex-direction:column;
+}
+
+/* Header */
+
+.chat-header{
+    padding:20px 30px;
+    background:rgba(255,255,255,0.35);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.4);
+
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.chat-header h2{
+    color:#0f172a;
+    font-size:28px;
+    font-weight:700;
+}
+
+.chat-header p{
+    color:#334155;
+    font-size:14px;
+}
+
+.bot-message{
+    align-self:flex-start;
+
+    background:white;
+    padding:15px 20px;
+
+    border-radius:20px 20px 20px 5px;
+
+    max-width:70%;
+
+    color:#0f172a;
+}
+
+.user-message{
+    align-self:flex-end;
+
+    background:#38bdf8;
+    color:white;
+
+    padding:15px 20px;
+
+    border-radius:20px 20px 5px 20px;
+
+    max-width:70%;
+}
+
+/* Input */
+
+.input-area{
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(15px);
+
+    border-top:1px solid rgba(255,255,255,0.3);
+}
+
+.input-area input{
+    flex:1;
+    height:55px;
+
+    border:none;
+    outline:none;
+
+    padding:0 20px;
+
+    border-radius:30px;
+
+    background:white;
+
+    font-size:16px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.input-area input::placeholder{
+    color:#64748b;
+}
+
+.input-area button{
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #38bdf8,
+        #2563eb
+    );
+
+    color:white;
+
+    font-size:22px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:0 6px 15px rgba(37,99,235,0.3);
+
+    transition:all 0.3s ease;
+}
+
+.input-area button:hover{
+    transform:scale(1.08);
+}
+
+.input-area button:active{
+    transform:scale(0.95);
+}
+.chat-box{
+    flex:1;
+    overflow-y:auto;
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+.chat-container{
+    width:90%;
+    max-width:900px;
+    height:90vh;
+
+    display:flex;
+    flex-direction:column;
+
+    border-radius:25px;
+    overflow:hidden;
+}
+.user-message{
+    align-self:flex-end;
+
+    background:linear-gradient(
+        135deg,
+        #38bdf8,
+        #2563eb
+    );
+
+    color:white;
+
+    padding:14px 18px;
+
+    border-radius:20px 20px 5px 20px;
+
+    max-width:70%;
+
+    word-wrap:break-word;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bot-message{
+    align-self:flex-start;
+
+    background:white;
+
+    color:#0f172a;
+
+    padding:14px 18px;
+
+    border-radius:20px 20px 20px 5px;
+
+    max-width:70%;
+
+    word-wrap:break-word;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+.bot-message::before{
+    content:"🤖";
+    margin-right:8px;
+}
+
+.user-message::before{
+    content:"👤";
+    margin-right:8px;
+}
+.chat-box{
+    flex:1;
+    padding:25px;
+
+    overflow-y:auto;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:15px;
+}
+.bot-message{
+    align-self:flex-start;
+    background:white;
+    color:#0f172a;
+
+    padding:15px 20px;
+    border-radius:20px 20px 20px 5px;
+
+    max-width:75%;
+
+    line-height:1.6;
+    white-space:pre-wrap;
+    word-break:break-word;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+.typing{
+    opacity:0.7;
+    font-style:italic;
+}
+@media screen and (max-width:768px){
+
+    .chat-container{
+        width:100%;
+        height:100vh;
+        border-radius:0;
+    }
+
+    .chat-header{
+        padding:15px;
+    }
+
+    .chat-header h2{
+        font-size:22px;
+    }
+
+    .chat-header p{
+        font-size:12px;
+    }
+
+    .chat-box{
+        padding:15px;
+    }
+
+    .user-message,
+    .bot-message{
+        max-width:85%;
+        font-size:14px;
+        padding:12px 15px;
+    }
+
+    .input-area{
+        padding:10px;
+        gap:8px;
+    }
+
+    .input-area input{
+        height:50px;
+        font-size:14px;
+        padding:0 15px;
+    }
+
+    .input-area button{
+        width:50px;
+        height:50px;
+        font-size:18px;
+    }
+}

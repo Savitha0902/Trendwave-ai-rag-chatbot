@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+.head{
+    background-image: url(https://img.magnific.com/premium-photo/white-smart-cute-3d-robot-raising-hand-with-speech-bubbles-isolated-blue-background-with-copyspace-ai-smart-bot-chatbot-customer-service-artificial-intelligence-assistant-technology-concept_36367-11222.jpg?semt=ais_hybrid&w=740&q=80);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.content{
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 500px;
+}
+    
+.head h1{
+    color:white;
+    font-size:55px;
+    font-weight:700;
+    max-width:550px;
+    line-height:1.2;
+}
+
+.head h1 span{
+    color:#0f172a;
+    font-size:60px;
+}
+
+.head h3{
+    color:white;
+    font-size:28px;
+    margin-top:25px;
+    font-weight:500;
+}
+
+.head h3 span{
+    color:white;
+    font-weight:700;
+}
+.head button{
+    margin-top:40px;
+    width:200px;
+    padding:15px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(135deg,#1e3a8a,#4f46e5);
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.head button:hover{
+    transform:translateY(-3px);
+}
+@media screen and (max-width:768px){
+
+    .content{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+    }
+
+    .head h1{
+        font-size: 32px;
+        max-width: 100%;
+    }
+
+    .head h1 span{
+        font-size: 36px;
+    }
+
+    .head h3{
+        font-size: 20px;
+    }
+
+    .head button{
+        width: 180px;
+    }
+}
